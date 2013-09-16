@@ -1,5 +1,5 @@
 // Problem 1:
-var change = function( cents ) {
+var change = function ( cents ) {
     var result = [ 0, 0, 0, 0 ];
     var coins = [ 25, 10, 5, 1 ];
     if ( cents >= 0 ) {
