@@ -72,16 +72,16 @@ var powers = function ( base, limit, f ) {
 
 // Problem 6:
 var interleave = function ( a1, a2 ) {
-    var result = [];
+    var interleavedArrays = [];
     while ( ( a1.length > 0 ) || ( a2.length > 0 ) ) {
         if ( a1.length > 0 ) {
-            result.push( a1.shift() );
+            interleavedArrays.push( a1.shift() );
         }
         if ( a2.length > 0 ) {
-            result.push( a2.shift() );
+            interleavedArrays.push( a2.shift() );
         }
     }
-    return result;
+    return interleavedArrays;
 };
 
 // Problem 7:
