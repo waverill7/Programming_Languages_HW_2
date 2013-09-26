@@ -98,7 +98,7 @@ var stutter = function ( a ) {
 
 // Problem 8:
 var wordCount = function ( s ) {
-    var result = {};
+    var dictionary = {};
     var word = "";
     var character = "";
     s = s.toLowerCase();
@@ -109,14 +109,14 @@ var wordCount = function ( s ) {
             word = word.concat( character );
         }
         else if ( word !== "" ) {
-            if ( result[ word ] === undefined ) {
-                result[ word ] = 1;
+            if ( dictionary[ word ] === undefined ) {
+                dictionary[ word ] = 1;
             }
             else {
-                result[ word ] += 1;
+                dictionary[ word ] += 1;
             }
             word = "";
         }
     }
-    return result;
+    return dictionary;
 };
