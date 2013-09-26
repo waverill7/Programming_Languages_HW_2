@@ -1,14 +1,14 @@
 // Problem 1:
 var change = function ( cents ) {
-    var result = [ 0, 0, 0, 0 ];
-    var coins = [ 25, 10, 5, 1 ];
+    var coins = [ 0, 0, 0, 0 ];
+    var coinValues = [ 25, 10, 5, 1 ];
     if ( cents >= 0 ) {
         for ( var i = 0; i < coins.length; i++ ) {
-            result[ i ] = Math.floor( cents / coins[ i ] );
-            cents = cents % coins[ i ];
+            coins[ i ] = Math.floor( cents / coinValues[ i ] );
+            cents = cents % coinValues[ i ];
         }
     }
-    return result;
+    return coins;
 }
 
 // Problem 2:
