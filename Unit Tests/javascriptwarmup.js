@@ -1,5 +1,5 @@
 // Problem 1:
-var change = function( cents ) {
+var change = function ( cents ) {
     var result = [ 0, 0, 0, 0 ];
     var coins = [ 25, 10, 5, 1 ];
     if ( cents >= 0 ) {
@@ -37,24 +37,33 @@ var scramble = function ( s ) {
 // For Problems 4 and 5:
 var iterator = function () {
     var n = 0;
-    return function ( base ) {
-        var result = Math.pow( base, n );
-        n++;
-        return result;
+    return function ( base, reset ) {
+        if ( reset ) {
+            n = 0;
+        }
+        else {
+            var result = Math.pow( base, n );
+            n++;
+            return result;
+        }
     }
 } ();
 
 // Problem 4:
 var powersOfTwo = function ( limit, f ) {
-    for ( var i = iterator( 2 ); i < limit; i = iterator( 2 ) ) {
+    var reset = true;
+    iterator( 2, reset );
+    for ( var i = iterator( 2, !reset ); i < limit; i = iterator( 2, !reset ) ) {
         f( i );
     }
 }
 
 // Problem 5:
 var powers = function ( base, limit, f ) {
+    var reset = true;
     if ( base > 1 ) {
-        for ( var i = iterator( base ); i < limit; i = iterator( base ) ) {
+        iterator( base, reset );
+        for ( var i = iterator( base, !reset ); i < limit; i = iterator( base, !reset ) ) {
             f( i );
         }
     }
