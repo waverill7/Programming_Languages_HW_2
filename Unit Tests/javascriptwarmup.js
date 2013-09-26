@@ -86,15 +86,15 @@ var interleave = function ( a1, a2 ) {
 
 // Problem 7:
 var stutter = function ( a ) {
-    var result = [];
-    var temp;
+    var doubledUpArrayItems = [];
+    var item;
     while ( a.length > 0 ) {
-        temp = a.shift();
+        item = a.shift();
         for ( var i = 0; i < 2; i++ ) {
-            result.push( temp );
+            doubledUpArrayItems.push( item );
         }
     }
-    return result;
+    return doubledUpArrayItems;
 };
 
 // Problem 8:
