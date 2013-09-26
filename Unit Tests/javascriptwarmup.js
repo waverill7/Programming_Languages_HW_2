@@ -51,9 +51,10 @@ var iterator = function () {
 
 // Problem 4:
 var powersOfTwo = function ( limit, f ) {
+    var base = 2;
     var reset = true;
-    iterator( 2, reset );
-    for ( var i = iterator( 2, !reset ); i < limit; i = iterator( 2, !reset ) ) {
+    iterator( base, reset );
+    for ( var i = iterator( base, !reset ); i < limit; i = iterator( base, !reset ) ) {
         f( i );
     }
 };
