@@ -22,16 +22,16 @@ var stripVowels = function ( s ) {
 
 // Problem 3:
 var scramble = function ( s ) {
-    var result = '';
+    var randomlyPermutedString = '';
     var i;
     var c;
     while ( s.length > 0 ) {
         i = Math.floor( s.length * Math.random() );
         c = s.charAt( i );
-        result = result.concat( c );
+        randomlyPermutedString = result.concat( c );
         s = s.replace( c, '' );
     }
-    return result;
+    return randomlyPermutedString;
 };
 
 // For Problems 4 and 5:
