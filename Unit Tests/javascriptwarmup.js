@@ -36,15 +36,15 @@ var scramble = function ( s ) {
 
 // For Problems 4 and 5:
 var iterator = function () {
-    var n = 0;
+    var x = 0;
     return function ( base, reset ) {
         if ( reset ) {
-            n = 0;
+            x = 0;
         }
         else {
-            var result = Math.pow( base, n );
-            n++;
-            return result;
+            var y = Math.pow( base, x );
+            x++;
+            return y;
         }
     }
 } ();
