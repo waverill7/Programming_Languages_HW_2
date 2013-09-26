@@ -28,7 +28,7 @@ var scramble = function ( s ) {
     while ( s.length > 0 ) {
         i = Math.floor( s.length * Math.random() );
         c = s.charAt( i );
-        randomlyPermutedString = result.concat( c );
+        randomlyPermutedString = randomlyPermutedString.concat( c );
         s = s.replace( c, '' );
     }
     return randomlyPermutedString;
