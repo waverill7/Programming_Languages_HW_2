@@ -9,7 +9,7 @@ var change = function ( cents ) {
         }
     }
     return coins;
-}
+};
 
 // Problem 2:
 var stripVowels = function ( s ) {
@@ -18,7 +18,7 @@ var stripVowels = function ( s ) {
         s = s.replace( new RegExp( vowels[ i ], 'g' ), "" );
     }
     return s;
-}
+};
 
 // Problem 3:
 var scramble = function ( s ) {
@@ -32,7 +32,7 @@ var scramble = function ( s ) {
         s = s.replace( c, '' );
     }
     return result;
-}
+};
 
 // For Problems 4 and 5:
 var iterator = function () {
@@ -56,7 +56,7 @@ var powersOfTwo = function ( limit, f ) {
     for ( var i = iterator( 2, !reset ); i < limit; i = iterator( 2, !reset ) ) {
         f( i );
     }
-}
+};
 
 // Problem 5:
 var powers = function ( base, limit, f ) {
@@ -67,7 +67,7 @@ var powers = function ( base, limit, f ) {
             f( i );
         }
     }
-}
+};
 
 // Problem 6:
 var interleave = function ( a1, a2 ) {
@@ -81,7 +81,7 @@ var interleave = function ( a1, a2 ) {
         }
     }
     return result;
-}
+};
 
 // Problem 7:
 var stutter = function ( a ) {
@@ -94,7 +94,7 @@ var stutter = function ( a ) {
         }
     }
     return result;
-}
+};
 
 // Problem 8:
 var wordCount = function ( s ) {
@@ -119,4 +119,4 @@ var wordCount = function ( s ) {
         }
     }
     return result;
-}
+};
