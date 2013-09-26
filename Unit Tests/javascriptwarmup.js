@@ -90,9 +90,8 @@ var stutter = function ( a ) {
     var item;
     while ( a.length > 0 ) {
         item = a.shift();
-        for ( var i = 0; i < 2; i++ ) {
-            doubledUpArrayItems.push( item );
-        }
+        doubledUpArrayItems.push( item );
+        doubledUpArrayItems.push( item );
     }
     return doubledUpArrayItems;
 };
