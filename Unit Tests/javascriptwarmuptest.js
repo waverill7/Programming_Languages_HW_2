@@ -31,7 +31,7 @@ $( function () {
     } );
 
     test( "Scramble Tests", function () {
-        var data = [ "", "a", "rat", "zzz", "^*&^*&^????g??" ];
+        var data = [ "", "a", "rat", "zzz", "^*&^*&^▱ÄÈËɡɳɷ" ];
         data.forEach( function ( s ) {
             ok( anagram( s, scramble( s ) ) );
         } );
